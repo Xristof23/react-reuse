@@ -25,25 +25,17 @@
   color: #61dafb;
 }
 section {
-  margin: 3rem;
+  margin: 1.5rem;
 }
 p {
-  margin: 8px;
+  margin: 0.5rem;
 }
 
 ul {
   text-align: left;
-  padding-left: 40%;
+  padding-left: 0.5rem;
 }
 .main-button {
   font-size: 2rem;
   border-radius: 5px;
-}
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

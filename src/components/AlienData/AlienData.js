@@ -3,6 +3,7 @@ export const initialProgress = [
   { id: 2, name: "Crystal", count: 0, emoji: "💎" },
   { id: 3, name: "Seeds", count: 10, emoji: "🫘" },
   { id: 4, name: "Plants", count: 0, emoji: "🌱" },
+  { id: 5, name: "Pickaxe", count: 0, emoji: " ⛏️ " },
 ];
 
 export const levels = [
@@ -26,20 +27,47 @@ export const randomMessages = [
   "Life just doesn't work without Crystal!",
   "We need more aliens!",
   "NASA won't come up here. Too far for their inferior technology.",
-  "The aliens are happy!",
-  "Planet Claire has pink air!",
+  "You want to believe!",
+  "Humans are ugly!",
 ];
+const futureStock = {
+  id: 10,
+  name: "Power drill",
+  price: 900,
+  message: "Now we're drilling property!",
+};
 
 export const shopStock = [
-  { id: 1, name: "Pickaxe", price: 42, message: "I picked this." },
-  { id: 2, name: "Hammer", price: 200, message: "Hammertime!" },
+  {
+    id: 1,
+    name: "Pickaxe",
+    price: 42,
+    emoji: " ⛏️ ",
+    message: "I picked this.",
+  },
+  { id: 2, name: "Hammer", price: 350, emoji: " 🔨 ", message: "Hammertime!" },
+
   {
     id: 3,
-    name: "Power drill",
-    price: 200,
-    message: "Now we're drilling property!",
+    name: "Advanced Tools",
+    price: 800,
+    emoji: " 🧰 ",
+    message: "Does every alien know what time it is? Tool Time!",
   },
-  { id: 4, name: "Small rocket", price: 2000, message: "It's rocket science!" },
+  {
+    id: 4,
+    name: "Small rocket",
+    price: 2000,
+    emoji: " 🚀 ",
+    message: "It's rocket science!",
+  },
+  {
+    id: 5,
+    name: "UFO",
+    price: 30000,
+    emoji: " 🛸 ",
+    message: "The mothership has landed!",
+  },
 ];
 
 // Vermutlich obsolet

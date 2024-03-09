@@ -1,0 +1,61 @@
+.section-game {
+  width: 600px;
+  border: 2px solid black;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  margin: 2px;
+  background-color: #c1ebc1;
+}
+h3 {
+  text-align: left;
+  font-size: 1.1rem;
+  padding: 4px;
+}
+.shop {
+  background-color: #d9ebd9;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.progress-display {
+  background-color: #d9ebd9;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 10rem;
+}
+button {
+  left: 50%;
+  max-width: 150px;
+}
+
+p {
+  text-align: left;
+}
+.message-main {
+  color: #0bf10b;
+  background-color: black;
+  border: 1px solid #0bf10b;
+  line-height: 1.5rem;
+}
+ul {
+  list-style-type: none;
+  align-items: left;
+}
+
+.shop-li {
+  width: 400px;
+  display: grid;
+  grid-template-columns: 1fr 6fr 3fr 2fr;
+  line-height: 1.8rem;
+}
+
+.basket-li {
+  display: grid;
+  grid-template-columns: 4fr 8fr;
+  line-height: 1.8rem;
+}
+.basket-sum {
+  padding-left: 30%;
+  font-weight: 600;
+  line-height: 1.8rem;
+}

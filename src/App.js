@@ -46,6 +46,7 @@ const zeroProgress = {
 };
 
 function App() {
+  const [component, setComponent] = useState("aliens0");
   // const [message, setMessage] = useState("");
   // const [progress, setProgress] = useLocalStorageState("progress", {
   //   defaultValue: zeroProgress,
@@ -121,7 +122,7 @@ function App() {
   //           setProgress(newProgress);
   //           setMessage("Bought something, yeah!");
   //         } else {
-  //           console.log("no deal");
+  //
   //           setProgress(progress);
   //           setMessage("We don't have enough crystal to buy this!");
   //         }
@@ -171,16 +172,27 @@ function App() {
       <header className="App-header">
         <h1>React Components for reuse</h1>
       </header>
-      <h2>Better Fake Weather</h2>
-      <p>
-        (ALPHA TEST!!!) Ever wanted to "generate" your own weather? (ALPHA
-        TEST!!!)
-      </p>
-      <section>
-        <BetterFakeWeather />
-        {/* <h2>Generating Slugs</h2>
+      <nav className="nav">
+        <select
+          id="navprov"
+          className="select-button"
+          value={component}
+          onChange={(event) => setComponent(event.target.value)}
+        >
+          <option value="">Choose a component</option>
+          <option value="weather">better fake weather 0.08</option>
+
+          <option value="aliens0">alien prototype 0.15</option>
+          <option value="slugs">generate slugs</option>
+        </select>
+      </nav>
+
+      {component === "weather" ? <BetterFakeWeather /> : null}
+      {component === "aliens0" ? <AlienPrototype /> : null}
+
+      {/* <h2>Generating Slugs</h2>
         <p>(ALPHA TEST!!!)</p> */}
-      </section>
+
       <section>
         {/* <h2>Generating Aliens</h2>
         <p>(ALPHA TEST!!!)</p> */}
@@ -247,7 +259,6 @@ function App() {
           <p>👾👾</p>
         )} */}
       </section>
-      <AlienPrototype />
     </div>
   );
 }

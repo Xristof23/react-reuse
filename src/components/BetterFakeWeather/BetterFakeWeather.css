@@ -22,7 +22,10 @@
   );
   color: white;
 }
-
+.white-space {
+  height: 800px;
+  background-color: white;
+}
 .temperature {
   font-size: 2rem;
   align-self: center;
