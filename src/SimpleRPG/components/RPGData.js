@@ -1,0 +1,36 @@
+const shopInventory = [
+  {
+    id: 0,
+    name: "Simple Club",
+    type: "weapon",
+    hands: 1,
+    damage: [3, 4, 5, 6],
+    damagetypes: ["blunt"],
+    image: null,
+    price: 5,
+    classes: ["fighter", "mage", "thief", "priest"],
+  },
+  {
+    id: 1,
+    name: "Quarterstaff",
+    type: "weapon",
+    hands: 2,
+    damage: [4, 5, 6, 7],
+    damagetypes: ["blunt"],
+    image: null,
+    price: 8,
+    classes: ["fighter", "mage", "thief", "priest"],
+  },
+
+  {
+    id: 2,
+    name: "Knife",
+    type: "weapon",
+    hands: 1,
+    damage: [3, 4, 5, 6],
+    damagetypes: ["pierce", "slash"],
+    image: null,
+    price: 8,
+    classes: ["fighter", "mage", "thief", "priest"],
+  },
+];

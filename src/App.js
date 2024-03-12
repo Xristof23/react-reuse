@@ -3,7 +3,7 @@ import "./App.css";
 import BetterFakeWeather from "./components/BetterFakeWeather/BetterFakeWeather";
 import { useEffect, useState } from "react";
 import AlienPrototype from "./components/AlienPrototype/AlienProtopye";
-
+import SimpleRPG from "./SimpleRPG";
 function getSlug(title) {
   const slug = title
     .trim()
@@ -35,18 +35,8 @@ const randomMessages = [
   "Planet Claire has pink air!",
 ];
 
-const zeroProgress = {
-  aliens: 2,
-  crystal: 0,
-  crystalToMine: 2000,
-  plants: 0,
-  spaceships: 0,
-  pickaxes: 0,
-  level: 1,
-};
-
 function App() {
-  const [component, setComponent] = useState("aliens0");
+  const [component, setComponent] = useState("rpg");
   // const [message, setMessage] = useState("");
   // const [progress, setProgress] = useLocalStorageState("progress", {
   //   defaultValue: zeroProgress,
@@ -104,53 +94,6 @@ function App() {
   //   setProgress(newProgress);
   //   setMessage("The red weed grows roots!");
   // }
-  // function BuyButton({ onClick, price, product }) {
-  //   return (
-  //     <button
-  //       onClick={() => {
-  //         if (progress.crystal >= price) {
-  //           const newProgress = {
-  //             ...progress,
-  //             crystal: progress.crystal - price,
-  //             ...(product === "pickaxe"
-  //               ? { pickaxes: progress.pickaxes + 1 }
-  //               : {}),
-  //             ...(product === "smallRocket"
-  //               ? { spaceships: progress.spaceships + 1 }
-  //               : {}),
-  //           };
-  //           setProgress(newProgress);
-  //           setMessage("Bought something, yeah!");
-  //         } else {
-  //
-  //           setProgress(progress);
-  //           setMessage("We don't have enough crystal to buy this!");
-  //         }
-  //       }}
-  //     >
-  //       BUY!
-  //     </button>
-  //   );
-  // }
-  /*   function handleBuy({ price }) {
-    // const rocketPrice = 100;
-    if (progress.crystal >= price) {
-      // const newStock = progress.spaceships + 1;
-      console.log(price);
-      const newProgress = {
-        ...progress,
-        crystal: progress.crystal - price,
-        spaceships: progress.spaceships,
-        pickaxes: progress.pickaxes + 1,
-      };
-      setProgress(newProgress);
-      setMessage("Bought something, yeah!");
-    } else {
-      console.log(price);
-      setProgress(progress);
-      setMessage("We don't have enough crystal to buy this!");
-    }
-  } */
 
   // function handleDeath() {
   //   const DeathToll = Math.round(progress.aliens * 0.1);
@@ -183,13 +126,16 @@ function App() {
           <option value="weather">better fake weather 0.08</option>
 
           <option value="aliens0">alien prototype 0.15</option>
-          <option value="slugs">generate slugs</option>
+          <option value="rpg">simple rpg prototype 0.01</option>
+          <option disabled value="slugs">
+            generate slugs
+          </option>
         </select>
       </nav>
 
       {component === "weather" ? <BetterFakeWeather /> : null}
       {component === "aliens0" ? <AlienPrototype /> : null}
-
+      {component === "rpg" ? <SimpleRPG /> : null}
       {/* <h2>Generating Slugs</h2>
         <p>(ALPHA TEST!!!)</p> */}
 

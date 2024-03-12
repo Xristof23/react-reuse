@@ -3,7 +3,7 @@ export const initialProgress = [
   { id: 2, name: "Crystal", count: 0, emoji: "💎" },
   { id: 3, name: "Seeds", count: 10, emoji: "🫘" },
   { id: 4, name: "Plants", count: 0, emoji: "🌱" },
-  { id: 5, name: "Pickaxe", count: 0, emoji: " ⛏️ " },
+  { id: 5, name: "Tool Power", count: 0, emoji: " ⚒️ " },
 ];
 
 export const levels = [
@@ -43,15 +43,24 @@ export const shopStock = [
     name: "Pickaxe",
     price: 42,
     emoji: " ⛏️ ",
+    type: "tool",
     message: "I picked this.",
   },
-  { id: 2, name: "Hammer", price: 350, emoji: " 🔨 ", message: "Hammertime!" },
+  {
+    id: 2,
+    name: "Hammer",
+    price: 350,
+    emoji: " 🔨 ",
+    type: "tool",
+    message: "Hammertime!",
+  },
 
   {
     id: 3,
     name: "Advanced Tools",
     price: 800,
     emoji: " 🧰 ",
+    type: "tool",
     message: "Does every alien know what time it is? Tool Time!",
   },
   {
@@ -59,6 +68,7 @@ export const shopStock = [
     name: "Small rocket",
     price: 2000,
     emoji: " 🚀 ",
+    type: "spacecraft",
     message: "It's rocket science!",
   },
   {
@@ -66,6 +76,7 @@ export const shopStock = [
     name: "UFO",
     price: 30000,
     emoji: " 🛸 ",
+    type: "spacecraft",
     message: "The mothership has landed!",
   },
 ];

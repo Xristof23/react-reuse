@@ -6,8 +6,10 @@ import { shopStock } from "../AlienData/AlienData";
 import { randomMessages } from "../AlienData/AlienData";
 import "./AlienPrototype.css";
 import Shop from "../Shop";
+import SmallShop from "../SmallShop";
 
 import Chance from "chance";
+
 const chance = new Chance();
 const alienName = chance.word();
 
@@ -77,7 +79,7 @@ export default function AlienPrototype() {
       )
     );
   }
-  console.log(progress);
+
   return (
     <section className="section-game">
       <h1>My cute aliens (PRE-ALPHA TEST!!!)</h1>
@@ -94,9 +96,18 @@ export default function AlienPrototype() {
           </p>
         ))}
       </div>
+      <br></br>
+      <SmallShop
+        shopStock={shopStock}
+        progress={progress}
+        setProgress={setProgress}
+        setMessage={setMessage}
+        message={message}
+      />
 
       <h3 className="message-main">Message: {message}</h3>
-      <Shop
+      <br></br>
+      {/* <Shop
         shopStock={shopStock}
         progress={progress}
         setProgress={setProgress}
@@ -104,8 +115,8 @@ export default function AlienPrototype() {
         message={message}
         setBasket={setBasket}
         basket={basket}
-      />
-      <br></br>
+      /> */}
+
       <p>
         <button className="main-button" onClick={handleClick}>
           CLICK ME!
@@ -127,6 +138,7 @@ export default function AlienPrototype() {
       <button onClick={handleDeath}>GET OLD AND DIE!</button> */}
         {/* <button onClick={() => setProgress(LevelTwo)}>LEVEL 2</button> */}
       </p>
+      <p>💀 deaths</p>
       {/* {progress.aliens >= 100 ? (
     <span>
       👾👾👾👾👾👾👾👾👾👾<br></br>

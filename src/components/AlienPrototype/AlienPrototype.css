@@ -1,3 +1,10 @@
+.shop-start {
+  font-size: 1.3rem;
+  padding: 4px;
+  margin-left: 30%;
+  max-width: 250px;
+}
+
 .section-game {
   width: 600px;
   border: 2px solid black;
