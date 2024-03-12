@@ -61,12 +61,20 @@ export default function BetterFakeWeather({ isGoodWeather, temperature }) {
     10 + randomSign() * getD6Roll() + randomSign() * getD6Roll();
 
   return (
-    <section className="weather-container">
-      <p className="smilie">
-        {fakeGoodWeather ? <span>🌞</span> : <span>⛈️</span>}
+    <>
+      <h2>Better Fake Weather</h2>
+      <p>
+        (ALPHA TEST!!!) Ever wanted to "generate" your own weather? (ALPHA
+        TEST!!!)
       </p>
-      <p className="temperature">{fakeTemperature} °C</p>
-      <p className="temperature"> {rainFallProphecy()}</p>
-    </section>
+      <section className="weather-container">
+        <p className="smilie">
+          {fakeGoodWeather ? <span>🌞</span> : <span>⛈️</span>}
+        </p>
+        <p className="temperature">{fakeTemperature} °C</p>
+        <p className="temperature"> {rainFallProphecy()}</p>
+      </section>
+      <p className="white-space"></p>
+    </>
   );
 }
