@@ -5,6 +5,25 @@ const chance = new Chance();
 const femaleName = chance.name({ gender: "female" });
 const maleName = chance.name({ gender: "male" });
 
+// const randomGender = chance.gender({ extraGenders: "non-binary" });
+
+//Geartest gear in named object
+
+let leatherHelmet = {
+  id: "hg000",
+  name: "Prayer Cap",
+  isEquipped: false,
+  armor: 1,
+  type: "armor",
+  weight: 1,
+  price: 5,
+  image: null,
+};
+
+leatherHelmet = {
+  ...leatherHelmet,
+  price: leatherHelmet.armor * 6,
+};
 //Geartest gear in array
 
 const headgear = [
@@ -21,6 +40,16 @@ const headgear = [
 
   {
     id: "hg002",
+    name: "Prayer Cap",
+    isEquipped: false,
+    armor: 2,
+    type: "armor",
+    weight: 2,
+    price: 6,
+    image: null,
+  },
+  {
+    id: "hg003",
     name: "Padded Leather Cap",
     isEquipped: false,
     armor: 2,
@@ -51,7 +80,7 @@ const headgear = [
     image: null,
   },
   {
-    id: "hg005",
+    id: "hg006",
     name: "Simple Iron Helmet",
     isEquipped: false,
     armor: 6,
